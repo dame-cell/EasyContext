@@ -14,7 +14,7 @@ train.py \
 --max-train-steps 400  \
 --learning-rate 2e-5  \
 --dataset PY007/slimpajama_mistral_tokenized_upsample_4096_chunk_128K \
---model output/h2o_bs_1M_step_400_lr_2e-5_32K_rope_100K  \
+--model output/h2o \
 --seq-length 32000 \
 --rope-theta 300000 \
 --parallel_mode data_parallel
