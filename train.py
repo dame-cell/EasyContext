@@ -61,6 +61,7 @@ def main(args):
         torch_dtype=torch.bfloat16,
         rope_theta=args.rope_theta,
         _attn_implementation="flash_attention_2",
+        token="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",
     )
 
     assert isinstance(
@@ -196,17 +197,17 @@ if __name__ == "__main__":
     args.add_argument("--seed", type=int, default=42)
     args.add_argument("--max-train-steps", type=int, default=400)
     args.add_argument("--learning-rate", type=float, default=2e-5)
-    args.add_argument("--rope-theta", type=float, default=100000)
-    args.add_argument("--model", type=str, default="meta-llama/Llama-2-7b-hf")
+    args.add_argument("--rope-theta", type=float, default=300000)
+    args.add_argument("--model", type=str, default="damerajee/Tiny-OpenHathi-v4")
     args.add_argument(
         "--dataset",
         type=str,
-        default="emozilla/pg_books-tokenized-bos-eos-chunked-65536",
+        default="damerajee/long_context_hindi",
     )
-    args.add_argument("--seq-length", type=int, default=16384)
+    args.add_argument("--seq-length", type=int, default=32000)
     args.add_argument(
         "--parallel_mode",
         type=str,
-        choices=["zigzag_ring_attn", "dist_flash_attn", "data_parallel"],
+        defualt= "data_parallel",
     )
     main(args.parse_args())
