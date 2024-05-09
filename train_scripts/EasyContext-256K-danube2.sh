@@ -8,7 +8,7 @@ accelerate launch \
 train.py \
 --batch-size 1 \
 --gradient-accumulate-every 4 \
---output-dir ./output/h2o_bs_1M_step_400_lr_2e-5_32K_rope_300K \
+--output-dir  "output" \
 --wandb EasyContext \
 --seed 2026 \
 --max-train-steps 400  \
