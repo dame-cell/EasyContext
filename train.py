@@ -188,12 +188,13 @@ def main(args):
         accelerator.print(f"Saving Finished")
 
 
+
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
     args.add_argument("--batch-size", type=int, default=1)
     args.add_argument("--gradient-accumulate-every", type=int, default=8)
-    args.add_argument("--output-dir", type=str, required=True)
-    args.add_argument("--wandb", type=str)
+    args.add_argument("--output-dir", type=str,default="outputs", required=True)
+    args.add_argument("--wandb", type=str,default="EasyContext")
     args.add_argument("--seed", type=int, default=42)
     args.add_argument("--max-train-steps", type=int, default=400)
     args.add_argument("--learning-rate", type=float, default=2e-5)
