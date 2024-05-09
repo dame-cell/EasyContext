@@ -2,10 +2,9 @@
 # HF's mistral architecture is off when used together with ring attention due to the way it implements rotary embedding. Llama has no such issue.
 
 
-accelerate launch \
+accelerate launch train.py \
 --config_file  accelerate_configs/single_node.yaml \
 --main_process_port 12345 \
-train.py \
 --batch-size 1 \
 --gradient-accumulate-every 4 \
 --output-dir  output \
