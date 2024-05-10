@@ -10,8 +10,8 @@ accelerate launch --config_file accelerate_configs/single_node.yaml --main_proce
 --seed 2026 \
 --max-train-steps 400 \
 --learning-rate 2e-5 \
---dataset PY007/slimpajama_mistral_tokenized_upsample_4096_chunk_128K \
---model output \
+--dataset damerajee/tokenized_long_context_hin \
+--model damerajee/Tiny-OpenHathi-v4 \
 --seq-length 32000 \
 --rope-theta 300000 \
 --parallel_mode data_parallel
