@@ -41,7 +41,7 @@ def main(args):
     accelerator = Accelerator(
         gradient_accumulation_steps=args.gradient_accumulate_every,
         mixed_precision="bf16",
-        log_with="wandb" if args.wandb else None,
+        #log_with="wandb" if args.wandb else None,
         kwargs_handlers=[timeout],
         # fsdp_plugin=fsdp_plugin,
     )
