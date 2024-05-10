@@ -209,6 +209,6 @@ if __name__ == "__main__":
     args.add_argument(
         "--parallel_mode",
         type=str,
-        defualt= "data_parallel",
+        default= "data_parallel",
     )
     main(args.parse_args())
