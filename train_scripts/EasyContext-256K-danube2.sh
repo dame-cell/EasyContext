@@ -6,7 +6,7 @@ accelerate launch --config_file accelerate_configs/single_node.yaml --main_proce
 --batch-size 1 \
 --gradient-accumulate-every 4 \
 --output-dir ./output/h2o \
---wandb EasyContext \
+#--wandb EasyContext \
 --seed 2026 \
 --max-train-steps 400 \
 --learning-rate 2e-5 \
